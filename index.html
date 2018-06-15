@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Responsive layout in 2018. CSS Grid</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/screen-16x10.css">
+    <link rel="stylesheet" href="highlight/styles/github.css">
+    <script async src="https://assets.codepen.io/assets/embed/ei.js"></script>
+</head>
+
+<body class="shower list">
+    <header class="caption">
+
+    </header>
+
+    <section class="slide first">
+        <h2>Responsive layout in 2018. <br> CSS Grid</h2>
+    </section>
+
+    <section class="slide">
+        <p>Велика кількість систем<br>побудови розмітки.</p>
+        <img class="place r" src="pictures/bg-frameworks.jpg" width="426" height="640" alt="CSS-фреймворки">
+    </section>
+
+    <section class="slide">
+        <h2>Flexbox, Bootstrap</h2>
+        <ul>
+            <li>одновимірність, розкладка тільки в одному напрямку</li>
+            <li>необхідність створювати нові контейнери-wrapperи</li>
+            <li>верстка підлаштовується під контент, а не навпаки</a></li>
+            <li>загромадженість в html розмітці</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Що там у браузерів?</h2>
+      <img class="place b" src="pictures/bg-browsers.jpg" width="600" alt="Браузеры">
+    </section>
+
+    <section class="slide">
+      <img class="" style="float: left;" src="pictures/css-grid.jpg" width="840" height="427" >
+    </section>
+
+    <section class="slide">
+      <h2 class="colored">Крок 1</h2>
+      <h3>Перетворюємо нашу обгортку в сітку</h3><br>
+      <pre>
+        <code>.wrapper {
+  display: grid;
+}</code>
+  </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="colored">Крок 2</h2>
+      <h3>Малюємо віртуальну <br>сітку</h3>
+      <img class="place r" src="pictures/bg-attach.jpg" width="426" height="640" alt="Цепляем к сетке">
+    </section>
+
+    <section class="slide">
+    <br><br>
+        <pre>
+          <code>.wrapper {
+  display: grid;
+  <span class="next">grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 50px 50px;</span>
+}</code>
+		</pre>
+    </section>
+
+    <section class="slide">
+    <h2>Результат</h2>
+      <p data-height="265" data-theme-id="0" data-slug-hash="mKEoOg" data-default-tab="css,result" data-user="sanahurskyi" data-embed-version="2" data-pen-title="mKEoOg" class="codepen">See the Pen <a href="https://codepen.io/sanahurskyi/pen/mKEoOg/">mKEoOg</a> by Vladyslav Sanahurskyi (<a href="https://codepen.io/sanahurskyi">@sanahurskyi</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+    </section>
+
+    <section class="slide">
+        <h2>Одиниці вимірювання</h2>
+        <ul>
+            <li><code>auto</code></li>
+            <li><code>px</code>, <code>rem</code>, <code>em</code>, <code>vh, vw</code> і т. д.</li>
+            <li><code>%</code></li>
+            <li><code>fr</code></li>
+            <li><code>max-content</code>, <code>min-content</code>, <code>minmax(<i>min</i>, <i>max</i>)</code></li>
+            <p>1vh = 1% від висоти вікна. При зменшенні висоти вікна, зменшується ширина, висота, шрифт елемента.</p>
+        </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Fraction</h2>
+      <p>fraction of available space - частка вільного простору</p>
+      <p data-height="250" data-theme-id="22457" data-slug-hash="KzpLoY" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/KzpLoY/">CSS Grid Layout - fraction</a> by Nataliya Karatkova on CodePen.</p>
+    </section>
+
+    <section class="slide">
+      <div class="slide-left">
+        <h2>Грід-лінії</h2>
+        <pre>
+          <code class="css">.grid-element {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+          </code>
+        </pre>
+      </div>
+      <div class="slide-right">
+        <p data-height="400" data-theme-id="22457" data-slug-hash="QNbXRK" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/QNbXRK/">CSS Grid Layout - Simple</a> by Nataliya Karatkova on CodePen.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-left">
+        <h2>Грід-лінії</h2>
+        <pre>
+          <code class="css">.grid-element {
+  grid-column: 3 / 4;
+  grid-row: 2 / 4;
+}</code>
+        </pre>
+      </div>
+      <div class="slide-right">
+        <p data-height="400" data-theme-id="22457" data-slug-hash="QNbXRK" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/QNbXRK/">CSS Grid Layout - Simple</a> by Nataliya Karatkova on CodePen.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-left">
+        <h2>Грід-область</h2>
+        <pre>
+          <code class="css">.grid-element {
+  grid-area: 2 / 3 / 4 / 4;
+}</code>
+        </pre>
+      </div>
+      <div class="slide-right">
+        <p data-height="400" data-theme-id="22457" data-slug-hash="QNbXRK" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/QNbXRK/">CSS Grid Layout - Simple</a> by Nataliya Karatkova on CodePen.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="slide-left">
+        <h2>Грід-область</h2>
+        <pre>
+          <code class="css">.grid-element {
+  grid-area: 2 / 3 / 4 / 4;
+}</code>
+        </pre>
+      </div>
+      <div class="slide-right">
+        <p>
+          <br>
+          <br>
+          <ol>
+            <li><code>grid-row-start</code></li>
+            <li><code>grid-column-start</code></li>
+            <li><code>grid-row-end</code></li>
+            <li><code>grid-column-end</code></li>
+          </ol>
+        </p>
+      </div>
+      <img class="place l b" src="pictures/why.jpg" alt="Однако" width="430">
+    </section>
+
+    <section class="slide">
+        <h2>Приклади</h2>
+        <a href="http://labs.jensimmons.com/#mondrian" target="_blank">CSS Mondrian Grid</a>
+    </section>
+
+    <section class="slide">
+      <div class="slide-left">
+        <h2 class="colored">Шaг 1 и 2</h2>
+        <pre>
+    <code class="css">body {
+  display: grid;
+  grid-template-rows: auto
+                      1fr
+                      auto;
+}</code>
+  </pre>
+      </div>
+      <div class="slide-right" style="width: 250px;">
+        <p data-height="400" data-theme-id="22457" data-slug-hash="KzdwLe" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/KzdwLe/">CSS Grid Layout - Layout</a> by Nataliya Karatkova on CodePen.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="colored">Шaг 3</h2>
+      <h3>Задаем шаблон областей</h3>
+    </section>
+
+    <section class="slide">
+      <div class="slide-left">
+        <pre>
+  <code class="css">body {
+  display: grid;
+  grid-template-rows: auto
+                      1fr
+                      auto;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}</code>
+</pre>
+      </div>
+      <div class="slide-right" style="width: 250px;">
+        <p data-height="400" data-theme-id="22457" data-slug-hash="KzdwLe" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/KzdwLe/">CSS Grid Layout - Layout</a> by Nataliya Karatkova on CodePen.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2 class="colored">Шaг 4</h2>
+      <h3>Цепляем к сетке</h3>
+    </section>
+
+    <section class="slide">
+      <div class="slide-left">
+        <pre>
+          <code class="css">header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+}</code>
+        </pre>
+        </div>
+        <div class="slide-right" style="width: 250px;">
+          <p data-height="400" data-theme-id="22457" data-slug-hash="KzdwLe" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/KzdwLe/">CSS Grid Layout - Layout</a> by Nataliya Karatkova on CodePen.</p>
+        </div>
+    </section>
+
+    <section class="slide">
+      <p data-height="400" data-theme-id="22457" data-slug-hash="KzdwLe" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="https://codepen.io/meuwka/pen/KzdwLe/">CSS Grid Layout - Layout</a> by Nataliya Karatkova on CodePen.</p>
+    </section>
+
+    <section class="slide">
+        <pre>
+    <code class="css">@media (min-width: 768px) {
+  body {
+    <span class="next">grid-template-columns: 1fr 2fr;</span>
+    <span class="next">grid-template-rows: 1fr
+                        auto;</span>
+    <span class="next">grid-template-areas: "header main"
+                         "footer main";</span>
+  }
+}</code>
+  </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Переваги</h2>
+        <ul>
+          <li>інтуїтивно зрозуміло</li>
+          <li>легка адаптація з допомогою media-запитів</li>
+          <li>порядок елементів в розмітці може бути довільним</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>.grid-element:nth-child(2) {
+  grid-column: col 4;
+}</code>
+      </pre>
+      <p data-height="420" data-theme-id="22457" data-slug-hash="xObear" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="http://codepen.io/meuwka/pen/XdmWbj/">CSS Grid Layout - Named Grid Lines</a> by Nataliya Karatkova (<a href="http://codepen.io/meuwka">@meuwka</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>.grid-element:nth-child(13) {
+  grid-column: span 8;
+}</code>
+      </pre>
+      <p data-height="420" data-theme-id="22457" data-slug-hash="XdmWbj" data-default-tab="result" data-user="meuwka" class="codepen">See the Pen <a href="http://codepen.io/meuwka/pen/XdmWbj/">CSS Grid Layout - Named Grid Lines</a> by Nataliya Karatkova (<a href="http://codepen.io/meuwka">@meuwka</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>.grid-element:nth-child(13) {
+  grid-column: span 8;
+  grid-row: span 2;
+}</code>
+      </pre>
+      <p data-height="420" data-theme-id="22457" data-slug-hash="OXPGEd" data-default-tab="result" data-user="meuwka" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/meuwka/pen/XdmWbj/">CSS Grid Layout - Named Grid Lines</a> by Nataliya Karatkova (<a href="http://codepen.io/meuwka">@meuwka</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Вирівнювання</h2>
+      <table>
+        <tr>
+          <td>
+            <p><b>Грід-контейнер</b></p>
+            <p>
+              <code>align-items</code>
+            </p>
+            <p>
+              <code>justify-items </code>
+            </p>
+          </td>
+          <td>
+            <p><b>Грід-элемент</b></p>
+            <p><code>align-self</code></p>
+            <p><code>justify-self</code></p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="slide">
+      <h2>Відступи</h2>
+      <table>
+        <tr>
+          <td>
+            <p><b>Автоматичні</b></p>
+            <p><code>align-content</code></p>
+            <p><code>justify-content</code></p>
+          </td>
+          <td>
+            <p><b>Задаємо вручну</b></p>
+            <p><code>grid-row-gap</code></p>
+            <p><code>grid-column-gap</code></p>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+<section class="slide">
+      <h2><a href="https://slack.engineering/rebuilding-slack-com-b124c405c193" target="_blank">Приклад Slack</a></h2>
+</section>
+
+
+    <section class="slide">
+        <h2 class="title">Дякую!</h2>
+    </section>
+
+    <div class="progress"></div>
+    <script src="shower/shower.min.js"></script>
+    <script src="highlight/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+
+</html>
