@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Search" transform="translate(-496.000000, -574.000000)" fill="#00B7F1" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(0.000000, 540.000000)">
+                <g id="Search" transform="translate(496.000000, 29.000000)">
+                    <path d="M32,32.84 L23.4660398,24.368 C24.7153052,22.4146667 25.4366552,20.1013333 25.4366552,17.6226667 C25.4379985,10.664 19.7316766,5 12.7183276,5 C5.70497859,5 0,10.664 0,17.624 C0,24.5853333 5.70497859,30.2493333 12.7183276,30.2493333 C15.0932751,30.2493333 17.3137436,29.6 19.2185375,28.472 L27.8102594,37 L32,32.84 Z M5,17.9993264 C5,13.5901322 8.58952774,10 12.9993265,10 C17.4104723,10 21,13.588785 21,17.9993264 C21,22.411215 17.4104723,26 12.9993265,26 C8.58952774,26 5,22.411215 5,17.9993264 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
